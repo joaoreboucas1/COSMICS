@@ -1,0 +1,14 @@
+#
+# Compiler options for Linux.
+#
+F77 = g77
+F77FLAGS = -O
+FFT_OBJ = fft3r.o
+LIBS =
+#
+#
+CC = gcc
+CFLAGS = -O
+#
+#
+CPP = gcc

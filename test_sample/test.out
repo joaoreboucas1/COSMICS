@@ -1,0 +1,141 @@
+ Enter Omega_b, Omega_c, Omega_v, Omega_nu (e.g. .05 .95 0 0)
+ Enter H0, Tcmb, Y_He, N_nu(massive) (e.g. 50 2.726 0.24 0)
+ Initial conditions:
+     Linger_con works only with isentropic (adiabatic) initial conditions.
+ Enter 1 for full Boltzmann equation for CMB (lmax<=10000, linear k)
+    or 0 for matter transfer functions only (lmax=100, log k)
+ Enter kmax (1/Mpc), nk, zend
+2091.59u 33.17s 35:46 98% 1+14k 2+275io 739pf+0w
+ Enter Omega_b, Omega_c, Omega_v, Omega_nu (e.g. .05 .95 0 0)
+ Enter H0, Tcmb, Y_He, N_nu(massive) (e.g. 50 2.726 0.24 0)
+ Initial conditions cases:
+     1 for isentropic (adiabatic) fluctuations,
+     2 for cdm entropy/isocurvature fluctuations, or
+     3 for baryon entropy/isocurvature fluctuations, or
+     4 for seed/isocurvature fluctuations
+ Enter 1, 2, 3, or 4 now
+ Enter 1 for full Boltzmann equation for CMB (lmax<=10000, linear k)
+    or 0 for matter transfer functions only (lmax=100, log k)
+ Enter kmin (1/Mpc), kmax (1/Mpc), nk, zend
+3372.11u 53.66s 57:53 98% 1+14k 8+392io 1314pf+0w
+ Enter lmax for C_l; spectral index n (scale-invariant is n=1)
+ As a diagnostic, deltat can write out one of the photon
+     transfer functions Delta_l(k) (i.e., for one value of l)
+ Enter l to write delta_l(k) to file (-1 for none)
+ Enter lingerg.dat filename
+ nkdone=         100
+3373.16u 53.80s 57:54 98% 1+14k 14+410io 1850pf+0w
+ Select type of initial power spectrum (matter transfer function):
+     1 for T(k) from linger.dat
+     2 for T(k) from approx. analytical fit
+     3 for T(k)=1 (scale-free)
+ Enter case (1,2,3) now:
+ Enter linger.dat filename
+ Omegab,c,v,n=  5.0000001E-02  0.9500000      0.0000000E+00  0.0000000E+00
+ H0,Tcmb,Y,Nnur,Nnunr,initfl=   50.00000       2.726000      0.2400000    
+           3           0           4
+ Enter long-wave spectral index n (scale-invariant is n=1)
+ Enter desired normalization at a=1:
+ Qrms-ps/micro-K (if > 0) or -sigma_8 (if < 0) = ?
+ Rombint failed to converge; integral, error=  6.264437901691056E-006
+  3.526188249169948E-007
+ Warning: extrapolating k below kmin of linger.dat
+          ak,akmin=  7.6293945E-04  9.999999040736945E-004
+ Qrms-ps/micro-K=   7.348361    
+
+ I can write the power spectrum of delta_rho/rho to disk (power.dat).
+ If you would like this, please enter kmin and kmax (1/Mpc)
+ Enter 0,0 if you don't want the power spectrum written to a file
+ Particle lattice size: np1,np2,np3=          32          32          32
+ Enter dx (Mpc, =1 for scale-free), epsilon (Mpc, =0 for PM), etat (=0.05)
+ npart, L_x, L_y, L_z=    32768    32.00    32.00    32.00 Mpc
+ Particle mass= .6940E+11 solar masses
+ Enter random number seed (9-digit integer)
+ Enter ido (=1,2,3) for action:
+   ido=1 Compute unconstrained realization
+   ido=2 Compute mean field of constraints
+   ido=3 Compute constrained realization
+
+ For unconstrained field at a=1:
+      Mean sigma_delta, sigma_psi=   6.277153       8.953257     Mpc
+      Chisq, dof, nu=   32792.91           32767  0.1012009    
+
+ For random realization at a=1:
+      sigma_delta, sigma_psi=   6.398636       10.18673     Mpc
+      Chisq, dof=   32792.91           32767
+      Maximum delta, displacement=   31.62777       24.24641     Mpc
+
+ Scaling density and displacements to a=  3.1617776E-02
+ For a=astart: linear sigma, delmax=  0.2023107      0.9999999    
+ RMS, max. 3-D displacement=  0.3220818      0.7666176     Mpc
+3374.45u 53.95s 57:56 98% 1+14k 14+421io 2401pf+0w
+ Select type of initial power spectrum (matter transfer function):
+     1 for T(k) from linger.dat
+     2 for T(k) from approx. analytical fit
+     3 for T(k)=1 (scale-free)
+ Enter case (1,2,3) now:
+ Enter Omega_m, Omega_v, H0 (km/s/Mpc, 1 for scale-free)
+ Enter long-wave spectral index n (scale-invariant is n=1)
+ Enter desired normalization at a=1:
+ Qrms-ps/micro-K (if > 0) or -sigma_8 (if < 0) = ?
+ Computing Delta_2(k) using Sachs-Wolfe approxmation
+ This may take several minutes.
+ik =   1 /  31
+ik =   2 /  31
+ik =   3 /  31
+ik =   4 /  31
+ik =   5 /  31
+ik =   6 /  31
+ik =   7 /  31
+ik =   8 /  31
+ik =   9 /  31
+ik =  10 /  31
+ik =  11 /  31
+ik =  12 /  31
+ik =  13 /  31
+ik =  14 /  31
+ik =  15 /  31
+ik =  16 /  31
+ik =  17 /  31
+ik =  18 /  31
+ik =  19 /  31
+ik =  20 /  31
+ik =  21 /  31
+ik =  22 /  31
+ik =  23 /  31
+ik =  24 /  31
+ik =  25 /  31
+ik =  26 /  31
+ik =  27 /  31
+ik =  28 /  31
+ik =  29 /  31
+ik =  30 /  31
+ik =  31 /  31
+ Linear sigma8=   1.583885    
+
+ I can write the power spectrum of delta_rho/rho to disk (power.dat).
+ If you would like this, please enter kmin and kmax (1/Mpc)
+ Enter 0,0 if you don't want the power spectrum written to a file
+ Particle lattice size: np1,np2,np3=          32          32          32
+ Enter dx (Mpc, =1 for scale-free), epsilon (Mpc, =0 for PM), etat (=0.05)
+ npart, L_x, L_y, L_z=    32768    16.00    16.00    16.00 Mpc
+ Particle mass= .8675E+10 solar masses
+ Enter random number seed (9-digit integer)
+ Enter ido (=1,2,3) for action:
+   ido=1 Compute unconstrained realization
+   ido=2 Compute mean field of constraints
+   ido=3 Compute constrained realization
+
+ For unconstrained field at a=1:
+      Mean sigma_delta, sigma_psi=   16.99802       13.67152     Mpc
+      Chisq, dof, nu=   32395.04           32767  -1.452973    
+
+ For random realization at a=1:
+      sigma_delta, sigma_psi=   16.61872       11.49454     Mpc
+      Chisq, dof=   32395.04           32767
+      Maximum delta, displacement=   75.08023       31.20195     Mpc
+
+ Scaling density and displacements to a=  1.3319086E-02
+ For a=astart: linear sigma, delmax=  0.2213461       1.000000    
+ RMS, max. 3-D displacement=  0.1530967      0.4155814     Mpc
+3414.44u 54.64s 58:38 98% 1+14k 14+438io 2903pf+0w

@@ -1,0 +1,16 @@
+#
+# Compiling on a Convex with veclib.
+#
+F77 = fc
+F77FLAGS = -O2
+FFT_OBJ = fft3r_convex.o
+LIBS = -lveclib
+#
+#
+CC = cc
+CFLAGS = -O2
+#
+#
+CPP = /usr/lib/cc/cpp
+#
+#

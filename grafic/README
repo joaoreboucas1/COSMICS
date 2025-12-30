@@ -1,0 +1,68 @@
+This directory contains the version 1.0 release of my Gaussian random
+field initial conditions program.  It can generate unconstrained or
+constrained realizations given the power spectrum and constraints.
+As part of its initialization, it also can compute the CMB quadrupole
+moment corresponding to a given sigma_8 or vice versa, and can save
+to disk the matter power spectrum.
+
+You must do the following to run grafic!
+----------------------------------------
+
+1.  Edit grafic.inc to set the number of particles, the geometry of
+    the initial particle lattice, the number of constraints (or 1
+    if no constraints; you'll be prompted at runtime as to whether
+    you want any constraints at all), and the number of output records.
+
+2.  If you wish to constrain the Gaussian random field, set ncon in
+    grafic.inc and edit subroutine constr.f.
+
+3.  run make in the main cosmics directory and follow the instructions.
+    Alternatively, run make in the grafic directory (to link the default
+    fft), or "make ARCH=CRAY" to link the Cray FFT (Cray only), or
+    "make ARCH=CONVEX" to link the Convex FFT (Convex with veclib only).
+    It should be straightforward to modify the FFT routines to use fast
+    library routines on other machines (e.g., ESSL on IBM).
+
+4.  run grafic and respond to its prompts.
+
+
+Notes:
+------
+
+1.  A non-cubic particle lattice may be used with np1 != np2 != np3.  However,
+    all must be divisible by 2.  It is not necessary to use a power of 2
+    (the fft included here can accomodate any prime factorization) although
+    it is most efficient to maximize the number of factors of 2 (and, possibly,
+    3,4,5 if you use Cray or Convex libraries).  Note that the unit cell
+    of the mesh is required to be cubic (with size dx*dx*dx); only the
+    totals lengths (np1*dx, np2*dx, np3*dx) may be non-cubic.
+
+2.  grafic writes two data files, delta.dat and p3m.dat, as its final output
+    (initial conditions for cosmological simulation codes), written as follows:
+        open(10,file='delta.dat',status='unknown',form='unformatted')
+	rewind 10
+	write(10) np1,np2,np3,dx,astart,omegam,omegav,h0
+	write(10) (((delta(i,j,k),i=1,np1),j=np2,k=np3)
+	close(10)
+
+    and
+	open(10,file='p3m.dat',status='unknown',form='unformatted')
+	rewind 10
+	write(10) npart,np1,np2,np3,dx,epsilon,astart,omegam,omegav,h0,
+     2                  dt,etat,nstep,ekin,egrav,egint
+	write(10) ((x(idim,j),idim=1,3),j=1,npart)
+	write(10) ((v(idim,j),idim=1,3),j=1,npart)
+	close(10)
+    npart=np1*np2*np3 is the number of particles; dx is the mean
+    interparticle spacing in comoving Mpc (not Mpc/h); epsilon is the
+    desired Plummer softening distance for p3m (in comoving Mpc, not
+    used in pm); a is the expansion factor; omegam and omegav are Omega
+    in matter and vacuum energy at a=1; H0 is the Hubble constant at a=1
+    (in km/s/Mpc); dt is the suggested first timestep; etat is a parameter
+    used in setting the timestep (set to <= .05 for decent integration
+    accuracy); nstep is the number of timesteps; ekin,egrav,egint are
+    the kinetic, gravitational, and integrated gravitational energies
+    (used in the Layzer-Irvine check; they are proper energies per
+    particle in units of (km/s)**2).  The positions have units of
+    comoving Mpc while the velocities are peculiar velocities in units
+    of proper km/s.

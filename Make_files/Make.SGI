@@ -1,0 +1,16 @@
+#
+# Compiler options for DEC Alpha or Mips
+#
+F77 = f77
+F77FLAGS = -O2
+FFT_OBJ = fft3r.o
+LIBS =
+#
+#
+CC = cc
+CFLAGS = -O2
+#
+#
+CPP = /usr/lib/cpp -P
+#
+#

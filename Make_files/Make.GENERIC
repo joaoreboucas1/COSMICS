@@ -1,0 +1,13 @@
+#
+# Compiler options for generic unix.
+#
+F77 = f77
+F77FLAGS = -O
+FFT_OBJ = fft3r.o
+LIBS =
+#
+#
+CC = cc
+CFLAGS = -O
+#
+#

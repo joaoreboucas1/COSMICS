@@ -1,0 +1,22 @@
+COSMICS has been successfully built and tested on:
+
+Pentium IV PC running Red Hat Linux 7.2
+Convex C3880 running ConvexOS 11.0
+Cray C90 running Unicos 8.0
+Dec AXP 3000/600 running OSF/1 v2.1
+IBM SP-2 (RS6000/540) running AIX 3
+IBM RS6000/370 running AIX 3.2
+SGI Indigo-2 running IRIX 5.3
+Sun 4/690 running SunOS 4.1.3_U1
+
+COSMICS fails to build on Decstations running (at least) Ultrix 4.3, due
+to Ultrix problems with shell commands in makefiles.  It can still be
+built manually by going into linger_con, linger_syn, and deltat, renaming
+the *.f.generic files to *.f, and compiling them separately with f77 -O2
+(in the linger directories, be sure to compile and link dverk.f also).
+Grafic can be built manually with f77 -O *.f in directory grafic.
+This manual procedure should also work for other systems that have problems
+with makefiles.
+
+Please let me know of other systems on which COSMICS builds
+successfully.

@@ -1,0 +1,4 @@
+For 1% accuracy in Qrms-ps using linger.dat for the transfer function,
+need 10 points per decade in k from 1.e-4 to 1.e-2.  Halve the error
+by taking 10 points per decade from k=1.e-5 to 1.e-2.  Decrease it by
+a factor of 8 by doubling the number of points per decade.

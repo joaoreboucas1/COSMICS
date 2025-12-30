@@ -1,0 +1,16 @@
+#
+# Compiling on a IBM RS6000  or SP2
+#
+F77 = xlf
+F77FLAGS =  -O2  -qextname
+FFT_OBJ = fft3r.o
+LIBS =
+#
+#
+CC = cc
+CFLAGS = -O2
+#
+#
+CPP = /usr/ccs/lib/cpp -P
+#
+#

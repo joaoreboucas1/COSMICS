@@ -1,0 +1,10 @@
+The data files in this directory were created on a Dec AXP 3000/600
+using 'make test' in cosmics.  The *.asc files are ascii versions of the
+binaries produced by grafic.  By compiling and running the program
+compar, you can gain confidence that the cosmics codes work properly
+on your machine.  You must first have done 'make test' yourself
+and have its results intact in test_results.  Note that the test does
+not compare the large binary files output by linger and grafic,
+lingerg.dat, delta.dat, and p3m.dat.  However, if the other tests
+succeed and the test.out is similar to the one you produce, then you
+may safely assume the tests have succeeded.

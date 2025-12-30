@@ -1,0 +1,16 @@
+#
+# Compiling on a HP Apollo
+#
+F77 = f77
+F77FLAGS =  +O1 +e +U77
+FFT_OBJ = fft3r.o
+LIBS =
+#
+#
+CC = cc
+CFLAGS = -O -Aa
+#
+#
+CPP = /lib/cpp
+#
+#

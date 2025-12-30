@@ -1,0 +1,21 @@
+06/22/03: Corrected dtbdla in subroutine inithermo (linger_con, linger_syn)
+	  Thanks to Christian Mueller for pointing out numerical errors.
+	  Wrapped call nu2 in linger_con and linger_syn to prevent compiler
+	  from complaining.
+	  Updated default parameter suggestions in subroutine setup
+	  (linger_con, linger_syn).
+
+07/11/02: Updated my email to edbert@mit.edu.
+	  Changed makefiles to work under Linux.
+	  Fixed a bug in grafic/power.f, where tcon should have been
+	  declared double precision.  Thanks to David Kahana for providing
+	  the Makefile fixes and finding the bug.
+
+05/14/01: Grafic/power.f: changed lines 95 and 159 to compute the
+          correct transfer function with vacuum energy, by replacing
+          -4.*(omegam-1.0) by -4.*(omegam+omegab-1.0)
+	  Thanks to Ken Nagamine for pointing this out.
+
+06/16/95: Linger: Change dtau1*ak from 20 to 10 to improve convergence
+	  for high ak.  Also, allow n1=1 in case ifulbol=0 (setup).
+	  Slightly changed output format of p3m.dat in grafic.

@@ -1,0 +1,16 @@
+#
+# Compiling on a Cray. 
+#
+F77 = cf77
+F77FLAGS = -Zv -Wf"-dp"
+FFT_OBJ = fft3r_cray.o
+LIBS =
+#
+#
+CC = cc
+CFLAGS = -O2
+#
+#
+CPP = /usr/lib/gpp -P
+#
+#
